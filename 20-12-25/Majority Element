@@ -1,0 +1,8 @@
+class Solution:
+    def majorityElement(self, nums):
+        c=0
+        m=None
+        for x in nums:
+            if c==0:m=x
+            c+=1 if x==m else -1
+        return m
