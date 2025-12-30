@@ -1,0 +1,10 @@
+class Solution:
+    def isBalanced(self, r):
+        def h(n):
+            if not n:return 0
+            l=h(n.left)
+            if l==-1:return -1
+            t=h(n.right)
+            if t==-1 or abs(l-t)>1:return -1
+            return 1+max(l,t)
+        return h(r)!=-1
