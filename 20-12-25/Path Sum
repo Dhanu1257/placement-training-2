@@ -1,0 +1,5 @@
+class Solution:
+    def hasPathSum(self, r, s):
+        if not r:return False
+        if not r.left and not r.right:return s==r.val
+        return self.hasPathSum(r.left,s-r.val) or self.hasPathSum(r.right,s-r.val)
