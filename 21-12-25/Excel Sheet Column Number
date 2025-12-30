@@ -1,0 +1,6 @@
+class Solution:
+    def titleToNumber(self, s):
+        v=0
+        for c in s:
+            v=v*26+(ord(c)-64)
+        return v
