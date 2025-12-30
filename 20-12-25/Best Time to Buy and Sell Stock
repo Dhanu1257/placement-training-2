@@ -1,0 +1,7 @@
+class Solution:
+    def maxProfit(self, p):
+        m=1e9;a=0
+        for x in p:
+            m=min(m,x)
+            a=max(a,x-m)
+        return a
