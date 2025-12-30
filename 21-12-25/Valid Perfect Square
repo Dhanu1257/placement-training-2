@@ -1,0 +1,4 @@
+class Solution:
+    def isPerfectSquare(self, n):
+        x=int(n**0.5)
+        return x*x==n
