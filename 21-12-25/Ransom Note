@@ -1,0 +1,8 @@
+class Solution:
+    def canConstruct(self, r, m):
+        from collections import Counter
+        a=Counter(r)
+        b=Counter(m)
+        for k in a:
+            if a[k]>b.get(k,0):return False
+        return True
