@@ -1,0 +1,4 @@
+class Solution:
+    def findWords(self, w):
+        r1=set("qwertyuiop");r2=set("asdfghjkl");r3=set("zxcvbnm")
+        return [x for x in w if set(x.lower())<=r1 or set(x.lower())<=r2 or set(x.lower())<=r3]
