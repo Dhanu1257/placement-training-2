@@ -1,0 +1,11 @@
+class Solution:
+    def intersect(self, a, b):
+            d={}
+            r=[]
+            for x in a:
+                d[x]=d.get(x,0)+1
+            for x in b:
+                if d.get(x,0)>0:
+                    r.append(x)
+                    d[x]-=1
+            return r
