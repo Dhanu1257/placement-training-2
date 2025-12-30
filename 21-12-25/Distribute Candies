@@ -1,0 +1,3 @@
+class Solution:
+    def distributeCandies(self, c):
+        return min(len(c)//2,len(set(c)))
