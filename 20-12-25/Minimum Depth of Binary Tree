@@ -1,0 +1,6 @@
+class Solution:
+    def minDepth(self, r):
+        if not r:return 0
+        if not r.left:return 1+self.minDepth(r.right)
+        if not r.right:return 1+self.minDepth(r.left)
+        return 1+min(self.minDepth(r.left),self.minDepth(r.right))
