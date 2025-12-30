@@ -1,0 +1,8 @@
+class Solution:
+    def isHappy(self, n):
+        s=set()
+        while n not in s:
+            s.add(n)
+            n=sum(int(c)**2 for c in str(n))
+            if n==1:return True
+        return False
