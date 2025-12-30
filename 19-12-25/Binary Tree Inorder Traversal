@@ -1,0 +1,9 @@
+class Solution:
+    def inorderTraversal(self, root):
+        r,st=[],[]
+        c=root
+        while c or st:
+            while c:
+                st.append(c);c=c.left
+            c=st.pop();r.append(c.val);c=c.right
+        return r
