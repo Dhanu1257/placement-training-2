@@ -1,0 +1,4 @@
+class Solution:
+    def maxDepth(self, r):
+        if not r:return 0
+        return 1+max(self.maxDepth(r.left),self.maxDepth(r.right))
