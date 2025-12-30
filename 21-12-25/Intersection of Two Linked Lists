@@ -1,0 +1,7 @@
+class Solution:
+    def getIntersectionNode(self, a, b):
+        x,y=a,b
+        while x is not y:
+            x=x.next if x else b
+            y=y.next if y else a
+        return x
