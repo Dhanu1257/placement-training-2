@@ -1,0 +1,29 @@
+class Solution {
+    public void reverseString(char[] s) {
+        // variables needed for the reversal process
+        int length = s.length; 
+        
+        // determine the middle point based on array length parity
+        int midPixle = 0; 
+        char current = 'a';
+        
+        // handle even-length arrays: swap the two middle elements first
+        if(length % 2 == 0) {
+            midPixle = length / 2 - 1;
+            current = s[midPixle]; 
+            s[midPixle] = s[midPixle + 1];
+            s[midPixle + 1] = current; 
+        }  
+        else {
+            // odd-length arrays: middle element stays in place
+            midPixle = (length - 1) / 2;
+        }
+        
+        // swap symmetric elements from both ends toward the center
+        for(int currentPixle = 0; currentPixle < midPixle; currentPixle++) {
+            current = s[length - 1 - currentPixle];
+            s[length - 1 - currentPixle] = s[currentPixle]; 
+            s[currentPixle] = current; 
+        }
+    }
+}
